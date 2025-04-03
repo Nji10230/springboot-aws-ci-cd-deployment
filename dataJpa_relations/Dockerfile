@@ -1,5 +1,5 @@
-# Use an official OpenJDK runtime as the base image
-FROM openjdk:17-jdk-slim
+# Use Amazon Corretto 17 instead of OpenJDK to avoid rate limits
+FROM public.ecr.aws/amazoncorretto/amazoncorretto:17
 
 # Set the working directory inside the container
 WORKDIR /app
