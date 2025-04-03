@@ -62,7 +62,7 @@ public class AddressController {
 
     @GetMapping("/greet")
     public String greet() {
-        return "Hello,  the AddressController!";
+        return "Hello,  ";
     }
     @GetMapping("/getAll")
     public CompletableFuture<ResponseEntity<AddressDTO>> getAllAddress() {
