@@ -1,0 +1,263 @@
+2025-03-27 11:17:44 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 7972 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 11:17:44 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 11:17:46 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 11:17:46 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 11:17:47 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 11:17:47 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63c84d31
+2025-03-27 11:17:47 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 11:17:47 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 11:17:47 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 11:17:49 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 11:17:49 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:17:49 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 6.072 seconds (process running for 7.229)
+2025-03-27 11:18:03 [http-nio-8080-exec-2] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 11:18:03 [http-nio-8080-exec-2] DEBUG [RequestID=6904106b-4a29-4e4b-ac56-2c96f8d4cc49] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/item/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"a2bf48c1-46b0-451a-b75f-a22335a872d4", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"75", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 11:18:03 [http-nio-8080-exec-2] INFO  [RequestID=6904106b-4a29-4e4b-ac56-2c96f8d4cc49] c.e.d.controller.ItemController - [RequestID=6904106b-4a29-4e4b-ac56-2c96f8d4cc49] Received request to create item: com.example.dataJpa_relations.dto.ItemDTO@6082484a
+2025-03-27 11:18:03 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.ItemServiceImplementation - Creating an item: com.example.dataJpa_relations.dto.ItemDTO@6082484a
+2025-03-27 11:18:03 [AsyncThread-1] ERROR [RequestID=] c.e.d.controller.ItemController - [RequestID=6904106b-4a29-4e4b-ac56-2c96f8d4cc49] Error creating item: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2025-03-27 11:18:04 [http-nio-8080-exec-4] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/item/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"a2bf48c1-46b0-451a-b75f-a22335a872d4", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"75", Content-Type:"application/json;charset=UTF-8"], payload={
+  "itemName": "mobile",
+  "quantity": 10,
+  "itemPrice": 100000.0
+}
+]
+2025-03-27 11:19:26 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 11:19:26 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 11:25:21 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 15232 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 11:25:21 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 11:25:22 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 11:25:23 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 11:25:23 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 11:25:23 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bce9ce4
+2025-03-27 11:25:23 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 11:25:23 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 11:25:23 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 11:25:25 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 11:25:25 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:25:25 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 4.938 seconds (process running for 5.341)
+2025-03-27 11:25:48 [http-nio-8080-exec-1] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 11:25:48 [http-nio-8080-exec-1] DEBUG [RequestID=7e060468-bab5-4ac9-90c9-be0a8650ca40] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/item/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"c9daad5a-f95a-4b97-9988-b41fc908ff7a", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"75", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 11:25:48 [http-nio-8080-exec-1] INFO  [RequestID=7e060468-bab5-4ac9-90c9-be0a8650ca40] c.e.d.controller.ItemController - [RequestID=7e060468-bab5-4ac9-90c9-be0a8650ca40] Received request to create item: com.example.dataJpa_relations.dto.ItemDTO@1fa800f6
+2025-03-27 11:25:48 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.ItemServiceImplementation - Creating an item: com.example.dataJpa_relations.dto.ItemDTO@1fa800f6
+2025-03-27 11:25:48 [AsyncThread-1] ERROR [RequestID=] c.e.d.controller.ItemController - [RequestID=7e060468-bab5-4ac9-90c9-be0a8650ca40] Error creating item: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+2025-03-27 11:25:48 [http-nio-8080-exec-3] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/item/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"c9daad5a-f95a-4b97-9988-b41fc908ff7a", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"75", Content-Type:"application/json;charset=UTF-8"], payload={
+  "itemName": "mobile",
+  "quantity": 10,
+  "itemPrice": 100000.0
+}
+]
+2025-03-27 11:26:20 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 11:26:20 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 11:28:14 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 47008 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 11:28:14 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 11:28:15 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 11:28:15 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 11:28:16 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 11:28:16 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b33fff9
+2025-03-27 11:28:16 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 11:28:16 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 11:28:16 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 11:28:17 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 11:28:18 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:28:18 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 4.51 seconds (process running for 4.923)
+2025-03-27 11:29:17 [http-nio-8080-exec-1] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 11:29:17 [http-nio-8080-exec-1] DEBUG [RequestID=655d7c1c-cef7-4066-a297-00e8dba75a90] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/address/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"dc776892-b314-441a-aa3d-fb4d97c854ff", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"92", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 11:29:17 [http-nio-8080-exec-1] WARN  [RequestID=655d7c1c-cef7-4066-a297-00e8dba75a90] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.util.concurrent.CompletableFuture<org.springframework.http.ResponseEntity<java.lang.String>> com.example.dataJpa_relations.controller.AddressController.create(com.example.dataJpa_relations.dto.AddressDTO): [Field error in object 'addressDTO' on field 'zipCode': rejected value [null]; codes [NotBlank.addressDTO.zipCode,NotBlank.zipCode,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressDTO.zipCode,zipCode]; arguments []; default message [zipCode]]; default message [Zip code is mandatory]] ]
+2025-03-27 11:29:17 [http-nio-8080-exec-1] DEBUG [RequestID=655d7c1c-cef7-4066-a297-00e8dba75a90] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/address/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"dc776892-b314-441a-aa3d-fb4d97c854ff", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"92", Content-Type:"application/json;charset=UTF-8"], payload={
+  "zipcode": "508207",
+  "street": "near ramalayam street",
+  "city": "Mirylaguda"
+}
+]
+2025-03-27 11:34:58 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 11:34:58 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 11:59:50 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 13056 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 11:59:50 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 11:59:52 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 11:59:52 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 11:59:53 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 11:59:53 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7aa3857b
+2025-03-27 11:59:53 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 11:59:53 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 11:59:53 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 11:59:54 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 11:59:55 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 11:59:55 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 5.291 seconds (process running for 6.436)
+2025-03-27 12:00:40 [http-nio-8080-exec-1] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 12:00:40 [http-nio-8080-exec-1] DEBUG [RequestID=05bc3d46-f648-4915-aed1-6403b1a22be5] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/orders/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"920da029-dee5-426a-9116-4f1d2442cf45", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"376", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 12:00:40 [http-nio-8080-exec-1] DEBUG [RequestID=05bc3d46-f648-4915-aed1-6403b1a22be5] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/orders/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"920da029-dee5-426a-9116-4f1d2442cf45", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"376", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 12:00:59 [http-nio-8080-exec-3] DEBUG [RequestID=25f231f2-1ee9-41ae-a145-995f7f9b9dcc] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"dc4dd2e1-762c-4058-b3d7-85d0a7562ebb", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"376", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 12:00:59 [http-nio-8080-exec-3] INFO  [RequestID=25f231f2-1ee9-41ae-a145-995f7f9b9dcc] c.e.d.controller.OrderController - [RequestID=25f231f2-1ee9-41ae-a145-995f7f9b9dcc] Received request to create order: com.example.dataJpa_relations.dto.OrderDTO@74f5c7a3
+2025-03-27 12:00:59 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.OrderServiceImplementation - Creating an order: com.example.dataJpa_relations.dto.OrderDTO@74f5c7a3
+2025-03-27 12:00:59 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.OrderServiceImplementation - Order created successfully with ID: 1
+2025-03-27 12:00:59 [AsyncThread-1] INFO  [RequestID=] c.e.d.controller.OrderController - [RequestID=25f231f2-1ee9-41ae-a145-995f7f9b9dcc] Order created successfully: Order created successfully with ID: 1
+2025-03-27 12:00:59 [http-nio-8080-exec-4] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"dc4dd2e1-762c-4058-b3d7-85d0a7562ebb", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"376", Content-Type:"application/json;charset=UTF-8"], payload={
+    "orderedDate": "2024-03-27T10:30:00",
+    "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "zipcode": "10001"
+    },
+    "items": [
+        {
+            "itemName": "Laptop",
+            "itemPrice": 1299.99
+        },
+        {
+            "itemName": "Wireless Mouse",
+            "itemPrice": 49.99
+        }
+    ]
+}]
+2025-03-27 12:03:12 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 12:03:12 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 13:38:16 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 13668 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 13:38:16 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 13:38:18 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 13:38:19 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 13:38:19 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 13:38:19 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 13:38:20 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5feb82b3
+2025-03-27 13:38:20 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 13:38:20 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 13:38:20 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 13:38:21 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 13:38:22 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 13:38:22 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 5.833 seconds (process running for 7.99)
+2025-03-27 13:41:14 [http-nio-8080-exec-3] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 13:41:14 [http-nio-8080-exec-3] DEBUG [RequestID=18624bba-f0ff-42e2-873c-2f5a87d41a4c] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"03a11eb0-260b-4728-b979-2e7481fddae9", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"383", Content-Type:"application/json;charset=UTF-8"]]
+2025-03-27 13:41:15 [http-nio-8080-exec-3] INFO  [RequestID=18624bba-f0ff-42e2-873c-2f5a87d41a4c] c.e.d.controller.OrderController - [RequestID=18624bba-f0ff-42e2-873c-2f5a87d41a4c] Received request to create order: com.example.dataJpa_relations.dto.OrderDTO@1d675f9a
+2025-03-27 13:41:15 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.OrderServiceImplementation - Creating an order: com.example.dataJpa_relations.dto.OrderDTO@1d675f9a
+2025-03-27 13:41:15 [AsyncThread-1] INFO  [RequestID=] c.e.d.s.s.i.OrderServiceImplementation - Order created successfully with ID: 2
+2025-03-27 13:41:15 [AsyncThread-1] INFO  [RequestID=] c.e.d.controller.OrderController - [RequestID=18624bba-f0ff-42e2-873c-2f5a87d41a4c] Order created successfully: Order created successfully with ID: 2
+2025-03-27 13:41:15 [http-nio-8080-exec-2] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create, client=0:0:0:0:0:0:0:1, headers=[user-agent:"PostmanRuntime/7.43.0", accept:"*/*", postman-token:"03a11eb0-260b-4728-b979-2e7481fddae9", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"383", Content-Type:"application/json;charset=UTF-8"], payload={
+    "orderedDate": "2024-02-27T10:30:00",
+    "address": {
+        "street": "1222 Main St",
+        "city": "New York",
+        "zipcode": "100023"
+    },
+    "items": [
+        {
+            "itemName": "Laptop",
+            "itemPrice": 1299900.99
+        },
+        {
+            "itemName": "Wireless Mouse",
+            "itemPrice": 4009.99
+        }
+    ]
+}]
+2025-03-27 14:28:51 [HikariPool-1 housekeeper] WARN  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m1s429ms215µs900ns).
+2025-03-27 14:30:15 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 14:30:15 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 14:50:07 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 52612 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 14:50:07 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 14:50:09 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 14:50:09 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 14:50:10 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 14:50:10 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3568ea59
+2025-03-27 14:50:10 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 14:50:10 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 14:50:10 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 14:50:12 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 14:50:12 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 14:50:12 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 5.4 seconds (process running for 5.944)
+2025-03-27 14:50:49 [http-nio-8080-exec-2] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-27 14:50:49 [http-nio-8080-exec-2] DEBUG [RequestID=b0ebaed6-cb78-4e9f-abd5-6bcdf7f61b63] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-3] DEBUG [RequestID=7eac019d-4ed4-4d98-9c61-2e93a3e9fc36] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-4] DEBUG [RequestID=bd655304-5bb8-4571-9e91-2e5a3129d20b] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-2] DEBUG [RequestID=b0ebaed6-cb78-4e9f-abd5-6bcdf7f61b63] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-4] DEBUG [RequestID=bd655304-5bb8-4571-9e91-2e5a3129d20b] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-3] DEBUG [RequestID=7eac019d-4ed4-4d98-9c61-2e93a3e9fc36] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-1] DEBUG [RequestID=1d2cbd25-83ea-48f8-b042-7e1648cb8c36] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-1] DEBUG [RequestID=1d2cbd25-83ea-48f8-b042-7e1648cb8c36] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-5] DEBUG [RequestID=3c917fe3-d77c-4f27-9911-ea8586c9853b] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-5] DEBUG [RequestID=3c917fe3-d77c-4f27-9911-ea8586c9853b] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-2] DEBUG [RequestID=8b4d444b-d6f9-4e3a-843c-8c6c7a8e49f9] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-2] DEBUG [RequestID=8b4d444b-d6f9-4e3a-843c-8c6c7a8e49f9] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-3] DEBUG [RequestID=cbc1deda-b073-4882-b749-09235c32367c] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-3] DEBUG [RequestID=cbc1deda-b073-4882-b749-09235c32367c] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-1] DEBUG [RequestID=6ff4c9f8-92c0-42b0-a4eb-41c90fdad065] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-1] DEBUG [RequestID=6ff4c9f8-92c0-42b0-a4eb-41c90fdad065] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-6] DEBUG [RequestID=a762145a-12e5-4883-8671-22a95ca798e4] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-6] DEBUG [RequestID=a762145a-12e5-4883-8671-22a95ca798e4] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-7] DEBUG [RequestID=dbb2c737-a18f-4582-9733-5eb38fd26185] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:49 [http-nio-8080-exec-7] DEBUG [RequestID=dbb2c737-a18f-4582-9733-5eb38fd26185] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-2] DEBUG [RequestID=f8649e9d-fa19-458d-a5e3-909e9c3757a7] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-2] DEBUG [RequestID=f8649e9d-fa19-458d-a5e3-909e9c3757a7] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-3] DEBUG [RequestID=478edfb5-b9f1-4624-947b-77bca6434022] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-3] DEBUG [RequestID=478edfb5-b9f1-4624-947b-77bca6434022] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-1] DEBUG [RequestID=9ab13a21-c274-479c-a8da-5c361acb85dc] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-1] DEBUG [RequestID=9ab13a21-c274-479c-a8da-5c361acb85dc] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-6] DEBUG [RequestID=b2a2f869-23e2-4f6e-8c13-e7cf446fec37] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-6] DEBUG [RequestID=b2a2f869-23e2-4f6e-8c13-e7cf446fec37] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-7] DEBUG [RequestID=e3f64b65-8cda-4bbf-8287-71b36405e107] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-7] DEBUG [RequestID=e3f64b65-8cda-4bbf-8287-71b36405e107] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-2] DEBUG [RequestID=923a5d87-9096-45d8-9b02-a6af93b04ce3] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-2] DEBUG [RequestID=923a5d87-9096-45d8-9b02-a6af93b04ce3] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-3] DEBUG [RequestID=ddc9feaf-4cae-4fad-b768-7f047f83c33d] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-3] DEBUG [RequestID=ddc9feaf-4cae-4fad-b768-7f047f83c33d] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-1] DEBUG [RequestID=6bf9a268-6b48-4648-a770-e571c938a6c0] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-1] DEBUG [RequestID=6bf9a268-6b48-4648-a770-e571c938a6c0] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-6] DEBUG [RequestID=524e50aa-2c49-4dc8-b8b2-df763d282216] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-6] DEBUG [RequestID=524e50aa-2c49-4dc8-b8b2-df763d282216] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-7] DEBUG [RequestID=47d33541-3945-4677-b69c-30a09ad84e5f] o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 14:50:50 [http-nio-8080-exec-7] DEBUG [RequestID=47d33541-3945-4677-b69c-30a09ad84e5f] o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /api/v1/order/create%20, client=127.0.0.1, headers=[connection:"keep-alive", content-length:"0", content-type:"application/x-www-form-urlencoded; charset=UTF-8", host:"localhost:8080", user-agent:"Apache-HttpClient/4.5.14 (Java/17.0.12)"]]
+2025-03-27 15:01:42 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 15:01:42 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-27 15:01:54 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Starting SpringbootDataJpaRelationshipsApplication using Java 17.0.12 with PID 23124 (C:\springboot_tasks\dataJpa_relations\dataJpa_relations\target\classes started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations)
+2025-03-27 15:01:54 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - An older version [1.3.0] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.0] using APR version [1.7.4].
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-27 15:01:56 [main] INFO  [RequestID=] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-27 15:01:56 [main] DEBUG [RequestID=] o.s.w.f.CommonsRequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2025-03-27 15:01:57 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-27 15:01:57 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37cf91d8
+2025-03-27 15:01:57 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-27 15:01:57 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27 15:01:57 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-27 15:01:58 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27 15:01:59 [main] INFO  [RequestID=] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-27 15:01:59 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplication - Started SpringbootDataJpaRelationshipsApplication in 5.156 seconds (process running for 5.563)
+2025-03-27 15:02:57 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-27 15:02:57 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

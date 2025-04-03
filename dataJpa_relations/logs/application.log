@@ -1,0 +1,11 @@
+2025-04-03 14:49:41 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplicationTests - Starting SpringbootDataJpaRelationshipsApplicationTests using Java 17.0.12 with PID 19260 (started by abhiram.pulukuri in C:\springboot_tasks\dataJpa_relations\dataJpa_relations)
+2025-04-03 14:49:41 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-04-03 14:49:44 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-03 14:49:47 [main] INFO  [RequestID=] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@614d7fbf
+2025-04-03 14:49:47 [main] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-03 14:49:47 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-03 14:49:47 [main] WARN  [RequestID=] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-03 14:49:51 [main] WARN  [RequestID=] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-03 14:49:52 [main] INFO  [RequestID=] c.e.d.SpringbootDataJpaRelationshipsApplicationTests - Started SpringbootDataJpaRelationshipsApplicationTests in 10.722 seconds (process running for 12.255)
+2025-04-03 14:49:52 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-03 14:49:55 [SpringApplicationShutdownHook] INFO  [RequestID=] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
