@@ -24,7 +24,7 @@ phases:
     commands:
       - echo "Building Java application..."
       - cd dataJpa_relations
-      - echo "Current directory: $(pwd)"
+      - echo "Current directory $(pwd)"
       - ls -la
       - mvn clean install -DskipTests
       - echo "Building Docker image..."
