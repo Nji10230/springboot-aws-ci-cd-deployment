@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
 
 @Service
 public class AddressServiceImplementation implements AddressService {
@@ -66,5 +67,15 @@ public class AddressServiceImplementation implements AddressService {
                         .map(addressMapper::toAddressDTO)
                         .orElseThrow(() -> new RuntimeException("Address not found with ID: " + id))
         );
+    }
+
+    @Override
+    public CompletionStage<AddressDTO> giveAllAddress() {
+
+        logger.info("Fetching all addresses");
+        return CompletableFuture.supplyAsync(() -> {
+            Iterable<Address> addresses = addressRepository.findAll();
+            return addressMapper.toAddressDTO((Address) addresses);
+        });
     }
 }

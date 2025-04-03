@@ -64,4 +64,19 @@ public class AddressController {
     public String greet() {
         return "Hello, this is a greeting from the AddressController!";
     }
+    @GetMapping("/getAll")
+    public CompletableFuture<ResponseEntity<AddressDTO>> getAllAddress() {
+        String requestId = MDC.get("requestId");
+        logger.info("[RequestID={}] Fetching all addresses", requestId);
+
+        return (CompletableFuture<ResponseEntity<AddressDTO>>) addressService.giveAllAddress()
+                .thenApply(addresses -> {
+                    logger.info("[RequestID={}] Successfully fetched all addresses: {}", requestId, addresses);
+                    return ResponseEntity.status(HttpStatus.OK).body(addresses);
+                })
+                .exceptionally(ex -> {
+                    logger.error("[RequestID={}] Error fetching all addresses: {}", requestId, ex.getMessage());
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                });
+    }
 }
