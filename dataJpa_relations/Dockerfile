@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the built application JAR file into the container
-COPY ./target/SpringbootDataJpaRelationships.jar /app
+COPY ./target/SpringbootDataJpaRelationships.jar /app/app.jar
 
 # Expose the application port (default is 8080)
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "SpringbootDataJpaRelationships.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
