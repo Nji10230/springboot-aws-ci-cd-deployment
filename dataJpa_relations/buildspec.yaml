@@ -7,11 +7,13 @@ phases:
       - yum update -y
       - yum install -y java-17-amazon-corretto-devel
       - java -version
+      - yum install -y maven
 
   pre_build:
     commands:
-      - echo "Logging in to Amazon ECR..."
-      - export JAVA_HOME="/usr/lib/jvm/java-17-amazon-corretto"
+      - echo "Setting up environment and logging in to Amazon ECR..."
+      - export JAVA_HOME=$(alternatives --display java | grep 'link currently points to' | awk '{print $NF}' | sed 's/\/bin\/java$//')
+      - echo "JAVA_HOME set to $JAVA_HOME"
       - export PATH=$JAVA_HOME/bin:$PATH
       - export REPOSITORY_URI=205930651657.dkr.ecr.us-east-1.amazonaws.com/abhiram-registry
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
@@ -21,6 +23,9 @@ phases:
   build:
     commands:
       - echo "Building Java application..."
+      - cd dataJpa_relations
+      - echo "Current directory: $(pwd)"
+      - ls -la
       - mvn clean install -DskipTests
       - echo "Building Docker image..."
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
@@ -30,5 +35,5 @@ phases:
     commands:
       - echo "Pushing the Docker image to Amazon ECR..."
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:latest
       - echo "Build completed successfully!"
