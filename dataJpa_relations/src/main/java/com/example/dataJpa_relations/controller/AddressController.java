@@ -64,6 +64,12 @@ public class AddressController {
     public String greet() {
         return "aloha";
     }
+
+    @GetMapping("/hello")
+    public String saySomething() {
+        return "hello";
+    }
+
     @GetMapping("/getAll")
     public CompletableFuture<ResponseEntity<AddressDTO>> getAllAddress() {
         String requestId = MDC.get("requestId");
