@@ -86,5 +86,8 @@ public class AddressController {
                 });
     }
 
-    ///
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("Service is up and running");
+    }
 }
